@@ -1,0 +1,44 @@
+# Tpa - coslant
+# warmup = isinlanma bekleme suresi (saniye). 0 yaparsan aninda isinlanir.
+# cancel-on-move = true ise beklerken hareket edince iptal olur.
+# request-timeout = istek kac saniye sonra zaman asimina ugrar.
+# cooldown = iki istek arasi bekleme (saniye). 0 = kapali.
+
+warmup: 5
+cancel-on-move: true
+request-timeout: 60
+cooldown: 0
+
+# geri sayim gosterimi. type: ACTIONBAR (hotbar ustu kucuk yazi) veya TITLE (ekran ortasi).
+# %time% = kalan saniye
+countdown:
+  type: ACTIONBAR
+  message: "&8» &eIsinlaniyor  &f&l%time%  &7saniye  &8«"
+  title: "&b&l%time%"
+  subtitle: "&7Isinlaniyor..."
+
+messages:
+  players-only: "&cBu komutu sadece oyuncular kullanabilir."
+  no-permission: "&cBunun icin yetkin yok."
+  player-not-found: "&cOyuncu bulunamadi ya da cevrimdisi."
+  self: "&cKendine istek gonderemezsin."
+  usage-tpa: "&7/tpa <oyuncu>"
+  already-pending: "&cZaten bekleyen bir istegin var. Once onu iptal et: &e/tpacancel"
+  cooldown: "&cBiraz bekle, &e%time%&c saniye sonra tekrar deneyebilirsin."
+  request-sent: "&a%player% &7oyuncusuna istek gonderildi. &8(/tpacancel)"
+  request-received: "&e%player% &7yanina gelmek istiyor. &a/tpaccept &7| &c/tpdeny"
+  no-request: "&cBekleyen bir istegin yok."
+  multiple-requests: "&eBirden fazla istek var. Sec: &f/tpaccept <oyuncu>"
+  accepted-sender: "&a%player% &7istegini kabul etti."
+  accepted-target: "&aIstegi kabul ettin."
+  denied-sender: "&c%player% &7istegini reddetti."
+  denied-target: "&7Istegi reddettin."
+  no-outgoing: "&cIptal edilecek bir istegin yok."
+  cancelled-own: "&7Istegin iptal edildi."
+  cancelled-target: "&7%player% &7istegini iptal etti."
+  expired-sender: "&7%player% &7oyuncusuna gonderdigin istek zaman asimina ugradi."
+  expired-target: "&7%player% &7oyuncusundan gelen istek zaman asimina ugradi."
+  offline: "&cOyuncu artik cevrimdisi."
+  warmup-start: "&7Kipirdamadan &e%time%&7 saniye bekle..."
+  teleported: "&aIsinlandin!"
+  cancelled-move: "&cHareket ettin, isinlanma iptal edildi."

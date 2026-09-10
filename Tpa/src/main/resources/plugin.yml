@@ -1,0 +1,30 @@
+name: Tpa
+version: ${project.version}
+main: com.metox.tpa.TpaPlugin
+api-version: 1.13
+author: metox
+description: Isinlanma istekleri, bekleme suresi ve ekranda geri sayim. Coslant.
+
+commands:
+  tpa:
+    description: Bir oyuncunun yanina isinlanmak icin istek gonder
+    usage: /tpa <oyuncu>
+  tpaccept:
+    description: Gelen istegi kabul et
+    usage: /tpaccept [oyuncu]
+    aliases: [tpyes]
+  tpdeny:
+    description: Gelen istegi reddet
+    usage: /tpdeny [oyuncu]
+    aliases: [tpno]
+  tpacancel:
+    description: Gonderdigin istegi iptal et
+    usage: /tpacancel
+
+permissions:
+  tpa.use:
+    description: Isinlanma komutlarini kullanabilir
+    default: true
+  tpa.bypass:
+    description: Bekleme suresi olmadan aninda isinlanir
+    default: false
